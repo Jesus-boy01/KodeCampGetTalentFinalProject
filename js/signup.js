@@ -33,9 +33,10 @@ signUp.addEventListener('click', signupSuccess);
 function signupSuccess(e) {
     e.preventDefault();
 
-    if (email.value && password.value && userName.value) {
-        window.location.id = '#staticBackdrop';
-    } else {
-        alert("All inputs must be filled and password must be at least 8 letters!");
-    }
+    let userEmail = email.value;
+    let userPassword = password.value;
+    
+
+    window.localStorage.setItem("userEmail", userEmail);
+    window.localStorage.setItem("userPassword", userPassword);
 }
