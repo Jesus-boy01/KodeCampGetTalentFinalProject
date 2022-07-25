@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+#hero-section .image-section {
+  background-image: url(../img/about-us-hero-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-border {
+  border-left: 10px solid rgba(39, 118, 234, 1);
+}
+
+.bg-light-blue {
+  background-color: rgba(212, 228, 251, 1);
+}
+
+.bg-light-blue:focus {
+  background-color: rgba(212, 228, 251, 1);
+}
+
+.input-border {
+  border-left: 4px solid rgba(39, 118, 234, 1);
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.bg-grey {
+  background-color: rgba(212, 212, 212, 1);
+}
+
+.card-body {
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.mobile-view {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .laptop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+}

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+padding: 0 ;
+margin: 0 ;
+box-sizing: border-box !important;
+font-family: "Inter", sans-serif !important;
+}
+
+/*Header styling*/
+
+.bg-blue {
+  background-color: rgba(39, 118, 234, 1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,.75);
+}
+
+.bg-footer {
+  background-color: rgba(8, 24, 47, 1);
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.blue {
+  color: rgba(39, 118, 234, 1);
+}
+
+.blue:hover {
+  color: #fff;
+  background-color: rgba(39, 118, 234, 0.8);
+}
+
+.rounded-top{
+border-top-left-radius: 5px !important;
+border-top-right-radius: 5px !important;
+}
+
+.rounded{
+border-radius: 5px !important;
+}
+
+.fs-7{
+font-size: 12px !important;
+}
+
+
+/* for both side header to be in the same height of 80px */
+.left-side-header, 
+.right-side-header{
+height: 50px;
+}
+
+.messenger{
+  width: 200px; 
+}
+
+.active-message{
+border-left: 3px solid rgba(39, 118, 234, 1);
+}
+
+
+.bi-search{
+cursor: pointer;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.mobile-header{
+  display: none;
+}
+
+
+.mobile-msg-input{
+display: none !important;
+}
+
+.sender .lh-1{
+line-height: 1.2 !important;
+font-weight: 500 !important;
+}
+
+.bg-light{
+  background-color: #F5F5F5 !important;
+}
+
+.lh-1{
+  line-height: 1.2 !important;
+}
+
+.outline-none {
+  outline: none;
+  border: 1px solid #F5F5F5 !important;
+}
+
+.outline-none:focus-visible {
+  border: 1px solid rgba(39, 118, 234, 1) !important;
+}
+
+.border-primary{
+  border-color: #93BBF5 !important;
+}
+
+
+@media (max-width: 992px) {
+
+  .mobile-header {
+      display: block;
+  }
+
+  .navbar-nav {
+      font-weight: bold;
+  }
+
+  .navbar-nav i {
+      display: none;
+  }
+
+  .sender .fs-7{
+    padding: 0px !important;
+    
+  } 
+  
+  .w-75{
+    width: 90% !important;
+    
+  }
+
+}
+
+
+@media (max-width: 426px){
+  .container{
+    margin-top: 0!important;
+    width: 100% !important;
+  }
+  .chat{
+    /* position: absolute; */
+    background-color: white !important;
+    display: none;
+  }
+  .right-side{
+    background-color: white !important;
+    padding-top: 0 !important;
+  }
+  .left-side-header{
+    display: none !important;
+  }
+  .left-side{
+    padding-top: 0 !important;
+    background-color: white;
+  }
+  
+  .top{
+    border-top: 1px solid #93BBF5!important;
+  }
+  .display-img{
+    width: 50px;
+    
+  }
+  .online{
+    width: 12px;
+  }
+
+  .time-mark p{
+    font-size: 9px !important;
+  }
+
+  .w-75{
+    width: 75% !important;
+    
+  }
+
+  .active-message{
+    border: none ;
+  }
+  
+  .messenger .fs-7{
+    width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .msg-search{
+    display: none !important;
+  }
+  .mobile{
+    display: flex !important;
+  }
+
+  .mobile-message{
+   display: block !important;
+   top:20px !important;
+   left: 70px !important; 
+   right: 70px;
+  }
+
+  .right-side-header{
+    display: none !important;
+  }
+
+  .chat .avatar{
+    display: none;
+  }
+
+  .message-wrapper:nth-child(odd){
+    background-color: #D4E4FB!important;
+    margin-left: 3px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    /* margin-right: auto !important;
+    margin-right: 10px !important; */
+  }
+  
+  .message-wrapper:nth-child(even){
+    background-color: #93BBF5!important;
+    margin-right: 5px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important; 
+  }
+  
+  .sender .lh-1{
+    margin-bottom: 5px !important;
+    line-height: 1.5 !important;
+    padding-right: 20px !important
+  }
+
+  .time{
+    text-align: end !important;
+  }
+
+  .sender h6{
+    display: none !important;
+  }
+
+  .message-input{
+    display: none !important;
+  }
+
+  .mobile-msg-input{
+    display: flex !important;
+    margin-top: 50px !important;
+  }
+
+  .right-side{
+    padding-bottom: 0 !important;
+  }
+
+  .cashion{
+    display: flex !important;
+  }
+
+  .messages-header{
+    display: none !important;
+  }
+
+  
+}
+
+@media (max-width: 326px){
+  .avatar{
+    margin-right: 10px !important;
+
+  }
+
+}
+
+
+
+
+  
+
+
+
+

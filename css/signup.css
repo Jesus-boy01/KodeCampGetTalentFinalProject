@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inter', sans-serif;
+}
+
+#signup {
+    background-color: #6FA4F1;
+}
+
+.icon-display {
+    visibility: visible !important;
+}
+
+.button-active-color {
+    background-color: #2776EA !important;
+}
+
+#sign-up-image {
+    background-image: url(../img/man\ image\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* height: auto; */
+}
+
+@media (max-width: 768px){
+    #mod-cover{
+        width: 70% !important;
+    }
+}
+
+/* Mobile screen */
+@media (max-width: 350px) {
+    #navtext, #join{
+        font-size: 12px;
+    }
+
+}
+@media (max-width: 426px) {
+    .form-bg {
+        display: none;
+    }
+     #bottom-text{
+        font-size: 13px;
+    }
+    #mod-cover{
+        width: 100% !important;
+    }
+
+}
+
+/* Tablet screen */
+@media (min-width: 425px) and (max-width: 767px) {
+    .form-bg {
+        display: none;
+    }
+
+    #bottom-text{
+        font-size: 14px;
+    }
+    
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .icon-container {
+        max-width: 720px !important;
+    }
+    
+}
+
+@media (min-width: 550px) and (max-width: 992px) {
+    .google-container {
+        max-width: 580px !important;
+    }
+    
+}
+
+@media (min-width: 550px) and (max-width: 992px) {
+    .fp-container {
+        width: 65% !important;
+    }
+    
+}
