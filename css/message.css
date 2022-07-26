@@ -133,11 +133,13 @@ font-weight: 500 !important;
 
 }
 
-
 @media (max-width: 426px){
   .container{
     margin-top: 0!important;
     width: 100% !important;
+  }
+  .top-spacing {
+    margin-top: 80px;
   }
   .chat{
     /* position: absolute; */
