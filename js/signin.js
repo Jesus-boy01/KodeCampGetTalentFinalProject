@@ -2,7 +2,7 @@ const password = document.getElementById("password");
 const togglePassword = document.getElementById("toggle-password");
 const email = document.getElementById("email");
 const signIn = document.getElementById("signin");
-const errorMessage = document.getElementById("error-message");
+const clearForm = document.getElementById("clear-form");
 
 togglePassword.addEventListener('click', function () {
     const type = password.getAttribute("type") === "password" ? "text" : "password";
@@ -43,19 +43,27 @@ function formValidation() {
 }
 
 function userValidation(key, details, email, password) {
-    if (key === "email") {
-        if (details[key] === email.value) {
-            window.location.href = "home.html";
-        } else {
-            alert("This email is not connected to an account");
-        }
-    } 
-    
-    if (key === "password") {
-        if (details[key] === password.value) {
-            window.location.href = "home.html";
+    if ((email.value !== "") && (password.value !== "")) {
+        if (key === "email") {
+            if (details[key] === email.value) {
+                window.location.href = "home.html";
+            } else {
+                alert(`This email is not connected to an account 
+Kindly create an account`);
+                resetForm();
+            }
+        } 
+        
+        if (key === "password") {
+            if (details[key] === password.value) {
+                window.location.href = "home.html";
+            }
         }
     }
+}
+
+function resetForm() {
+    clearForm.reset();
 }
 
 const userDetails = [
