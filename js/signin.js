@@ -48,8 +48,7 @@ function userValidation(key, details, email, password) {
             if (details[key] === email.value) {
                 window.location.href = "home.html";
             } else {
-                alert(`This email is not connected to an account 
-Kindly create an account`);
+                alert(`This email is not connected to an account\nKindly create an account`);
                 resetForm();
             }
         } 
