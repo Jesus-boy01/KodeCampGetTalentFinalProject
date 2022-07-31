@@ -45,6 +45,7 @@ body{font-family: 'Inter', sans-serif;}
 .blog-image1:hover, .blog-image2:hover, .blog-image3:hover{transform: scale(1.1) !important;  transition: ease-in-out 1s;}
 @media(max-width:425px){
     .blogg{margin: 0 20px !important;}
+    .companies img{width: 70%;padding-bottom: 10px;padding-top: 10px; filter: grayscale(0%) !important;transition: all 0.3s ease-in-out;} 
 }
 @media (max-width: 768px){
     .companies img{width: 40%;}
