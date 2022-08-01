@@ -23,7 +23,7 @@ function iconDisplay() {
 email.addEventListener('input', changeButtonColor);
 
 function changeButtonColor() {
-    signIn.classList.add("button-active-color")
+    signIn.classList.add("button-active-color");
 }
 
 signIn.addEventListener('click', signinSuccess);
@@ -35,39 +35,17 @@ function signinSuccess(e) {
 }
 
 function formValidation() {
-    for (const details of userDetails) {
-        for (let key in details) {
-            userValidation(key, details, email, password)
+    for (let key in userDetails) { 
+        if ((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruit")) {
+            window.location.href = "home-recruit.html";
+        } else if ((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruiter")) {
+            window.location.href = "home.html";
         }
     }
 }
 
-function userValidation(key, details, email, password) {
-    if ((email.value !== "") && (password.value !== "")) {
-        if (key === "email") {
-            if (details[key] === email.value) {
-                window.location.href = "home.html";
-            } else {
-                alert(`This email is not connected to an account\nKindly create an account`);
-                resetForm();
-            }
-        } 
-        
-        if (key === "password") {
-            if (details[key] === password.value) {
-                window.location.href = "home.html";
-            }
-        }
-    }
-}
-
-function resetForm() {
-    clearForm.reset();
-}
-
-const userDetails = [
-    {
-        email: localStorage.getItem("userEmail"),
-        password: localStorage.getItem("userPassword")
-    }
-];
+const userDetails = {
+    email: localStorage.getItem("userEmail"),
+    password: localStorage.getItem("userPassword"),
+    position: localStorage.getItem("userPost")
+};
