@@ -20,6 +20,7 @@ password.addEventListener('input', changeButtonColor);
 password.addEventListener('input', signUpModal);
 confirmPassword.addEventListener('input', changeButtonColor);
 confirmPassword.addEventListener('input', signUpModal);
+userSelect.addEventListener("change", signUpModal);
 
 function iconDisplay() {
     if (!(onfocus)) {
@@ -61,7 +62,7 @@ function signupSuccess(e) {
 function signUpModal() {
     let passValue = password.value;
     let passLength = passValue.length;
-
+    
     if ((userName.value && email.value && password.value && confirmPassword.value) && (passLength >= 8) && (password.value === confirmPassword.value)) {
         if (userSelect.value === "Recruit") {
             successModal.innerHTML = `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
