@@ -65,6 +65,16 @@
                                     Password should not be less than 8 characters!
                                 </div>
                             </div>
+                            <div class="mb-3 icon-wrap position-relative">
+                                <input type="password" class="form-control border-0 py-lg-3 py-md-2" placeholder="Confirm Password" id="confirm-password" required style="color: #555;">
+                                <i class="bi bi-eye-slash icon fs-5 position-absolute" style="top: 25%; right: 5%; cursor: pointer; visibility: hidden;" id="eyeicon"></i>
+                                <div class="pass-unmatch pt-2 text-danger"></div>
+                            </div>
+                            <select class="form-select border-0 py-lg-3 py-md-2 mb-3" name="user-select" id="user-select" required>
+                                <!-- <option value="" selected disabled>Sign up as:</option> -->
+                                <option value="Recruit">Recruit</option>
+                                <option value="Recruiter">Recruiter</option>
+                            </select>
                             <div id="submit-btn">
                                 <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="signup" class="text-decoration-none btn btn-primary border-0 text-white py-lg-3 py-md-2 fw-bold w-100" style="font-size: 22px;">Join Now</a>
                             </div>
@@ -89,7 +99,7 @@
     </div>
      <!-- Modal -->
     <div class="success-modal"></div>
-                          
+
     </section>
     <script>
         let forms = document.querySelectorAll(".needs-validation");
