@@ -40,6 +40,8 @@ function formValidation() {
             window.location.href = "home-recruit.html";
         } else if ((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruiter")) {
             window.location.href = "home.html";
+        } else {
+            alert("This email is not connected to an account\nKindly create one");
         }
     }
 }
