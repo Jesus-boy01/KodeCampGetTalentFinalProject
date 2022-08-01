@@ -28,7 +28,7 @@ if(window.matchMedia("(max-width: 425px)").matches){
                                 <div class="sender" style="width: 85%;">
                                     <h6 class="fw-bolder text-end pe-4">Odunlami Oluwafemi</h6>
                                     <p class="fs-7 pe-4 lh-1">${message.value}</p>
-                                    <p class="fs-7 ps-3 time mb-2">${currentHour}:${currentMinute}</p>
+                                    <p class="fs-7 pe-4 time mb-2 text-end">${currentHour}:${currentMinute}</p>
                                 </div>
                                 <div class="avatar d-sm-none d-md-none d-lg-block ms-4">
                                     <img class="display-img" src="./img/odunlami.png">
