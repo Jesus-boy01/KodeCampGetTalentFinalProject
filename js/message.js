@@ -19,38 +19,41 @@ const message = document.getElementById("message");
 const currentDate = new Date();
 const currentHour = currentDate.getHours();
 const currentMinute = currentDate.getMinutes();
+const newMessageArray = [];
+let formattedMinute;
+
+if ((currentMinute >= 0) && (currentMinute < 10)) {
+  formattedMinute = `0${currentMinute}`;
+} else {
+  formattedMinute = currentMinute;
+}
 
 sendIcon.addEventListener('click', newMessageFeature);
 
 function newMessageFeature() {
-newMessage.innerHTML = `<div class="d-flex justify-content-between message-wrapper align-items-start mt-3 ms-auto me-4 px-3 pt-2 w-75 rounded"  style= "background-color: #fff">
+  let newMessageHandler = "";
+    newMessageHandler = `<div class="d-flex justify-content-between message-wrapper align-items-start mt-3 ms-auto me-4 px-3 pt-2 w-75 rounded"  style= "background-color: #fff">
                               
-                          <div class="sender" style="width: 85%;">
-                              <h6 class="fw-bolder text-end pe-4">Temidayo Oyegoke</h6>
-                              <p class="fs-7 pe-4 lh-1">${message.value}</p>
-                              <p class="fs-7 ps-3 time mb-2">${currentHour}:${currentMinute}</p>
-                          </div>
-                          <div class="avatar d-sm-none d-md-none d-lg-block ms-4">
-                              <img class="display-img" src="./img/temidayo.png">
-                          </div>
-                          </div>`;
+                                <div class="sender" style="width: 85%;">
+                                    <h6 class="fw-bolder text-end pe-4">Odunlami Oluwafemi</h6>
+                                    <p class="fs-7 pe-4 lh-1">${message.value}</p>
+                                    <p class="fs-7 ps-3 time mb-2 text-end">${currentHour}:${formattedMinute}</p>
+                                </div>
+                                <div class="avatar d-sm-none d-md-none d-lg-block ms-4">
+                                  <img class="display-img" src="./img/temidayo.png">
+                                </div>
+                                </div>`;
 
-resetForm();
+  newMessageArray.push(newMessageHandler);
+
+  newMessageArray.forEach(userMessage => {
+    newMessage.innerHTML += userMessage;
+  })
+
+  resetForm();
 }
 
 function resetForm() {
-messageForm.reset();
+  messageForm.reset();
 }
-
-
-
-
-
-
-  
-
-
-
-
-
  
