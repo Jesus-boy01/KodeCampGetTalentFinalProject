@@ -72,6 +72,9 @@
 .information-t label{
     color: #555555 !important;
 }
+.form-color{
+    background-color: #F5F5F5;
+}
 @media (max-width: 992px) {
     .mobile {
         display: block;
