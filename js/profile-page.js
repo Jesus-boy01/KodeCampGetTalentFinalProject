@@ -17,7 +17,7 @@ window.localStorage.setItem("recruiterAbout", recruiterAbout);
 
 if (document.referrer === "https://jesus-boy01.github.io/KodeCampGetTalentFinalProject/updated-pp.html") {
     renderProfileUpdate();
-} else if (document.referrer === "http://127.0.0.1:5501/updated-pp.html") {
+} else if (document.referrer === "http://127.0.0.1:5500/updated-pp.html") {
     renderProfileUpdate();
 }
 
