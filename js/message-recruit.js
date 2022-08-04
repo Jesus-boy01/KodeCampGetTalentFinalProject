@@ -20,7 +20,14 @@ const currentDate = new Date();
 const currentHour = currentDate.getHours();
 const currentMinute = currentDate.getMinutes();
 const newMessageArray = [];
+let formattedHour;
 let formattedMinute;
+
+if ((currentHour >= 0) && (currentHour < 10)) {
+  formattedHour = `0${currentHour}`;
+} else {
+  formattedHour = currentHour;
+}
 
 if ((currentMinute >= 0) && (currentMinute < 10)) {
   formattedMinute = `0${currentMinute}`;
@@ -37,18 +44,16 @@ function newMessageFeature() {
                                 <div class="sender" style="width: 85%;">
                                     <h6 class="fw-bolder text-end pe-4">Odunlami Oluwafemi</h6>
                                     <p class="fs-7 pe-4 lh-1">${message.value}</p>
-                                    <p class="fs-7 ps-3 time mb-2 text-end">${currentHour}:${formattedMinute}</p>
+                                    <p class="fs-7 ps-3 time mb-2 text-end">${formattedHour}:${formattedMinute}</p>
                                 </div>
                                 <div class="avatar d-sm-none d-md-none d-lg-block ms-4">
                                     <img class="display-img" src="./img/odunlami.png">
                                 </div>
                                 </div>`;
 
-  newMessageArray.push(newMessageHandler);
-
-  newMessageArray.forEach(userMessage => {
-    newMessage.innerHTML += userMessage;
-  })
+  newMessageArray.unshift(newMessageHandler);
+  let recruitMessage = newMessageArray.shift(newMessageArray);
+  newMessage.innerHTML += recruitMessage;
 
   resetForm();
 }
