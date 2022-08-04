@@ -44,11 +44,10 @@ function newMessageFeature() {
                                 </div>
                                 </div>`;
 
-  newMessageArray.push(newMessageHandler);
-
-  newMessageArray.forEach(userMessage => {
-    newMessage.innerHTML += userMessage;
-  })
+  newMessageArray.unshift(newMessageHandler);
+  let recruitMessage = newMessageArray.shift(newMessageArray);
+  console.log(recruitMessage);
+  newMessage.innerHTML += recruitMessage;
 
   resetForm();
 }
