@@ -60,7 +60,7 @@ function newMessageFeature() {
                                 </div>`;
 
   newMessageArray.unshift(newMessageHandler);
-  let recruitMessage = newMessageArray.shift(newMessageArray);
+  let recruitMessage = newMessageArray.shift(newMessageHandler);
   newMessage.innerHTML += recruitMessage;
 
   resetForm();
