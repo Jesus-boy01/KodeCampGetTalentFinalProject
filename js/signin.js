@@ -40,10 +40,11 @@ function formValidation() {
             window.location.href = "home-recruit.html";
         } else if ((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruiter")) {
             window.location.href = "home.html";
-        } else {
-            alert("This email is not connected to an account\nKindly create one");
         }
     }
+    
+    if (!((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruit")) && !((userDetails["email"] === email.value) && (userDetails["password"] === password.value) && (userDetails["position"] === "Recruiter")))
+    alert("This email is not connected to an account\nKindly create one");
 }
 
 const userDetails = {
