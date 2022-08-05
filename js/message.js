@@ -22,6 +22,7 @@ const currentMinute = currentDate.getMinutes();
 const newMessageArray = [];
 let formattedHour;
 let formattedMinute;
+let timeZone;
 
 if ((currentHour >= 0) && (currentHour < 10)) {
   formattedHour = `0${currentHour}`;
@@ -35,6 +36,13 @@ if ((currentMinute >= 0) && (currentMinute < 10)) {
   formattedMinute = currentMinute;
 }
 
+if (currentHour < 12) {
+  timeZone = "AM";
+} else {
+  timeZone = "PM";
+}
+
+
 sendIcon.addEventListener('click', newMessageFeature);
 
 function newMessageFeature() {
@@ -44,7 +52,7 @@ function newMessageFeature() {
                                 <div class="sender" style="width: 85%;">
                                     <h6 class="fw-bolder text-end pe-4">Odunlami Oluwafemi</h6>
                                     <p class="fs-7 pe-4 lh-1">${message.value}</p>
-                                    <p class="fs-7 ps-3 time mb-2 text-end">${formattedHour}:${formattedMinute}</p>
+                                    <p class="fs-7 ps-3 time mb-2 text-end">${formattedHour}:${formattedMinute} ${timeZone}</p>
                                 </div>
                                 <div class="avatar d-sm-none d-md-none d-lg-block ms-4">
                                   <img class="display-img" src="./img/temidayo.png">
