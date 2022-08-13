@@ -50,7 +50,7 @@ function newMessageFeature() {
     newMessageHandler = `<div class="d-flex justify-content-between message-wrapper align-items-start mt-3 ms-auto me-4 px-3 pt-2 w-75 rounded"  style= "background-color: #fff">
                               
                                 <div class="sender" style="width: 85%;">
-                                    <h6 class="fw-bolder text-end pe-4">Odunlami Oluwafemi</h6>
+                                    <h6 class="fw-bolder text-end pe-4">Temidayo Oyegoke</h6>
                                     <p class="fs-7 pe-4 lh-1">${message.value}</p>
                                     <p class="fs-7 ps-3 time mb-2 text-end">${formattedHour}:${formattedMinute} ${timeZone}</p>
                                 </div>
