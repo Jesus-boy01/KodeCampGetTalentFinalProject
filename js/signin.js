@@ -26,9 +26,9 @@ function changeButtonColor() {
     signIn.classList.add("button-active-color");
 }
 
-signIn.addEventListener('click', signinSuccess);
+signIn.addEventListener('click', signInSuccess);
 
-function signinSuccess(e) {
+function signInSuccess(e) {
     e.preventDefault();
 
     formValidation();
