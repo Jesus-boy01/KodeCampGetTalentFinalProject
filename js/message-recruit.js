@@ -22,7 +22,7 @@ const currentMinute = currentDate.getMinutes();
 const newMessageArray = [];
 let formattedHour;
 let formattedMinute;
-let timeZone
+let timeZone;
 
 if ((currentHour >= 0) && (currentHour < 10)) {
   formattedHour = `0${currentHour}`;

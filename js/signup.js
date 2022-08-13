@@ -55,7 +55,7 @@ function signupSuccess(e) {
     }
 
     if (password.value !== confirmPassword.value) {
-        passUnmatch.innerHTML = "Password Unmatched!";
+        passUnmatch.innerHTML = "Password does not match!";
     }
 }
 
