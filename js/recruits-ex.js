@@ -11,7 +11,6 @@ function trackFilter() {
     trackName.forEach(track => {
         let userSelect = document.getElementById("user-select").value;
         let trackValue = track.innerText;
-        console.log(trackValue);
         if (trackValue === userSelect) {
             currentFilter.innerHTML = trackValue;
             track.parentElement.parentElement.parentElement.parentElement.style.display = 'block';
